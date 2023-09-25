@@ -1,7 +1,8 @@
 import { atom } from "jotai";
-import { bookQuotesAtom, sourceAtom } from ".";
+import { bgColorsAtom, bookQuotesAtom, sourceAtom } from ".";
 
 export const cardInformAtom = atom((get) => ({
   bookQuotes: get(bookQuotesAtom),
   ...get(sourceAtom),
+  bgColors: get(bgColorsAtom),
 }));

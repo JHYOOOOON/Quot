@@ -8,3 +8,7 @@ export type Source = {
 };
 
 export type BookQuotes = string;
+
+export type Color = string;
+
+export type BgColors = Color[];

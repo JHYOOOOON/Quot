@@ -1,9 +1,16 @@
 "use client";
 
 import { useAtom } from "jotai";
-import { Source, bookQuotesAtom, sourceAtom } from "@/store";
-import { Label } from ".";
-import { ChangeEvent, HTMLInputTypeAttribute } from "react";
+import {
+  ChangeEvent,
+  HTMLInputTypeAttribute,
+  MouseEventHandler,
+  useState,
+} from "react";
+
+import { Source, bgColorsAtom, bookQuotesAtom, sourceAtom } from "@/store";
+import { ColorButton, Label } from ".";
+import { Color } from "./Color";
 
 type SourceItem = {
   label: string;
@@ -16,6 +23,8 @@ type SourceItem = {
 export const Form = () => {
   const [bookQuotes, setBookQuotes] = useAtom(bookQuotesAtom);
   const [source, setSource] = useAtom(sourceAtom);
+  const [bgColors, setBgColors] = useAtom(bgColorsAtom);
+  const [bgColor, setBgColor] = useState("#000000");
   const sourceItems: SourceItem[] = [
     { label: "저자", name: "author", type: "text", valueKey: "author" },
     { label: "제목", name: "name", type: "text", valueKey: "name" },
@@ -49,8 +58,23 @@ export const Form = () => {
       }));
     };
 
+  const handleBgColorDelete = (targetIndex: number) => {
+    setBgColors((prevColors) =>
+      prevColors.filter((_, index) => index !== targetIndex)
+    );
+  };
+
+  const handleColorSelect: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.preventDefault();
+    if (bgColors.length === 4) {
+      alert("최대 4개까지만 설정 가능합니다.");
+      return;
+    }
+    setBgColors((prevColors) => [...prevColors, bgColor]);
+  };
+
   return (
-    <form>
+    <div>
       <Label label="인용 문구" name="bookQuotes" position="top">
         <textarea
           id="bookQuotes"
@@ -71,6 +95,25 @@ export const Form = () => {
           </Label>
         ))}
       </div>
-    </form>
+      <div>
+        <Label label="배경색상" name="backgroundColors" position="top">
+          <Color
+            value={bgColor}
+            onClick={handleColorSelect}
+            onChange={(event) => {
+              setBgColor(event.target.value);
+            }}
+          />
+        </Label>
+        {bgColors.map((color, index) => (
+          <ColorButton
+            key={`${index}_color`}
+            color={color}
+            index={index}
+            handleDelete={handleBgColorDelete}
+          />
+        ))}
+      </div>
+    </div>
   );
 };

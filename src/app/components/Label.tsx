@@ -1,5 +1,7 @@
 "use client";
 
+import styled from "styled-components";
+
 interface ILabel {
   label: string;
   name: string;
@@ -9,9 +11,17 @@ interface ILabel {
 
 export const Label = ({ label, name, position = "left", children }: ILabel) => {
   return (
-    <div className={`flex ${position === "left" ? "flex-row" : "flex-col"}`}>
+    <Wrapper className={`${position}`}>
       <label htmlFor={name}>{label}</label>
       {children}
-    </div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  display: flex;
+  gap: 7px;
+  .top {
+    flex-direction: column;
+  }
+`;

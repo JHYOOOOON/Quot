@@ -1,5 +1,5 @@
 import { atom } from "jotai";
-import { BookQuotes, Source } from ".";
+import { BgColors, BookQuotes, Source } from ".";
 
 export const bookQuotesAtom = atom<BookQuotes>("");
 
@@ -11,3 +11,5 @@ export const sourceAtom = atom<Source>({
   publicationYear: new Date().getFullYear(),
   page: "",
 });
+
+export const bgColorsAtom = atom<BgColors>([]);
