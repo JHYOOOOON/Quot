@@ -1,6 +1,4 @@
-export * from "./Textarea";
-export * from "./Input";
-export * from "./Label";
+export * from "./commons";
 
 export * from "./Form";
 export * from "./Card";
