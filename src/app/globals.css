@@ -1,16 +1,59 @@
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 214, 219, 220;
+	--foreground-rgb: 0, 0, 0;
+	--background-rgb: 214, 219, 220;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-rgb: 0, 0, 0;
+	}
+}
+
+@font-face {
+	font-family: "IBMPlexSans";
+	font-weight: 400;
+	font-style: normal;
+	src: url("/fonts/IBMPlexSansKR-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "IBMPlexSans";
+	font-weight: 700;
+	font-style: bold;
+	src: url("/fonts/IBMPlexSansKR-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "NanumMyeongjo";
+	font-weight: 400;
+	font-style: normal;
+	src: url("/fonts/NanumMyeongjo-Regular.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "NanumMyeongjo";
+	font-weight: 700;
+	font-style: bold;
+	src: url("/fonts/NanumMyeongjo-Bold.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 400;
+	font-style: normal;
+	src: url("/fonts/NotoSansKR-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "NotoSans";
+	font-weight: 700;
+	font-style: bold;
+	src: url("/fonts/NotoSansKR-Bold.ttf") format("truetype");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background-rgb);
+	font-family: "NotoSans", sans-serif;
+	color: rgb(var(--foreground-rgb));
+	background: var(--background-rgb);
 }
