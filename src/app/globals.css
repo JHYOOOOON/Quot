@@ -1,6 +1,15 @@
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-rgb: 214, 219, 220;
+
+	--font-size-200: 0.75rem; /* 12px */
+	--font-size-300: 0.875rem; /* 14px */
+	--font-size-400: 1rem; /* 16px, base */
+	--font-size-500: 1.25rem; /* 20px */
+	--font-size-600: 1.5rem; /* 24px */
+	--font-size-700: 1.75rem; /* 28px */
+	--font-size-800: 2rem; /* 32px */
+	--font-size-900: 2.25rem; /* 36px */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,4 +65,5 @@ body {
 	font-family: "NotoSans", sans-serif;
 	color: rgb(var(--foreground-rgb));
 	background: var(--background-rgb);
+	font-size: 16px;
 }
