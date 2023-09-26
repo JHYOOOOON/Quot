@@ -89,7 +89,7 @@ export const Form = () => {
 				))}
 			</Section>
 			<div>
-				<Label label="배경색상" name="backgroundColors" position="top">
+				<Label label="배경색상(최대 4개)" name="backgroundColors" position="top">
 					<Color
 						value={bgColor}
 						onClick={handleColorSelect}
@@ -98,14 +98,16 @@ export const Form = () => {
 						}}
 					/>
 				</Label>
-				{bgColors.map((color, index) => (
-					<ColorButton
-						key={`${index}_color`}
-						color={color}
-						index={index}
-						handleDelete={handleBgColorDelete}
-					/>
-				))}
+				<ColorsWrapper>
+					{bgColors.map((color, index) => (
+						<ColorButton
+							key={`${index}_color`}
+							color={color}
+							index={index}
+							handleDelete={handleBgColorDelete}
+						/>
+					))}
+				</ColorsWrapper>
 			</div>
 		</Wrapper>
 	);
@@ -122,4 +124,10 @@ const Wrapper = styled.div`
 	flex-direction: column;
 	gap: 10px;
 	max-width: 500px;
+`;
+
+const ColorsWrapper = styled.div`
+	display: flex;
+	gap: 10px;
+	margin-top: 9px;
 `;
