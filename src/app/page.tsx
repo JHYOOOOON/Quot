@@ -13,8 +13,8 @@ export default function Home() {
 }
 
 const Main = styled.main`
+	width: fit-content;
 	margin: 0 auto;
-	max-width: 1200px;
 	display: flex;
 	gap: 10px;
 `;
