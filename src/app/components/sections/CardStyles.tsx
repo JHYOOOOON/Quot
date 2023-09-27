@@ -2,7 +2,7 @@ import { ChangeEvent, MouseEventHandler, useState } from "react";
 import { styled } from "styled-components";
 import { useAtom } from "jotai";
 
-import { Color, ColorButton, Label, Select } from "..";
+import { Color, ColorButton, Label, Section, Select } from "..";
 import { Font, bgColorsAtom, fontAtom } from "@/store";
 
 export const CardStyles = () => {
@@ -29,30 +29,32 @@ export const CardStyles = () => {
 	};
 
 	return (
-		<section>
+		<Section title="꾸미기">
 			<Label label="글꼴" name="font">
 				<Select onChange={handleFontChange} defaultValue={font} options={fonts} />
 			</Label>
-			<Label label="배경색상(최대 4개)" name="backgroundColors" position="top">
-				<Color
-					value={bgColor}
-					onClick={handleColorSelect}
-					onChange={(event) => {
-						setBgColor(event.target.value);
-					}}
-				/>
-			</Label>
-			<ColorsWrapper>
-				{bgColors.map((color, index) => (
-					<ColorButton
-						key={`${index}_color`}
-						color={color}
-						index={index}
-						handleDelete={handleBgColorDelete}
+			<div>
+				<Label label="배경색상(최대 4개)" name="backgroundColors" position="top">
+					<Color
+						value={bgColor}
+						onClick={handleColorSelect}
+						onChange={(event) => {
+							setBgColor(event.target.value);
+						}}
 					/>
-				))}
-			</ColorsWrapper>
-		</section>
+				</Label>
+				<ColorsWrapper>
+					{bgColors.map((color, index) => (
+						<ColorButton
+							key={`${index}_color`}
+							color={color}
+							index={index}
+							handleDelete={handleBgColorDelete}
+						/>
+					))}
+				</ColorsWrapper>
+			</div>
+		</Section>
 	);
 };
 

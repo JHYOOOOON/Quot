@@ -16,6 +16,6 @@ export const Form = () => {
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 20px;
 	max-width: 500px;
 `;

@@ -1,5 +1,5 @@
 import { useAtom } from "jotai";
-import { Input, Label, Textarea } from "..";
+import { Input, Label, Section, Textarea } from "..";
 import { Source, bookQuotesAtom, sourceAtom } from "@/store";
 import { ChangeEvent, HTMLInputTypeAttribute } from "react";
 import { styled } from "styled-components";
@@ -48,7 +48,7 @@ export const CardContents = () => {
 	};
 
 	return (
-		<section>
+		<Section title="인용">
 			<Label label="인용 문구" name="bookQuotes" position="top">
 				<Textarea
 					id="bookQuotes"
@@ -57,7 +57,7 @@ export const CardContents = () => {
 					placeholder={"인용하고 싶은 문구를 작성해주세요"}
 				/>
 			</Label>
-			<Section>
+			<Source>
 				{sourceItems.map((item) => (
 					<Label label={item.label} name={item.name} key={item.label}>
 						<Input
@@ -68,12 +68,12 @@ export const CardContents = () => {
 						/>
 					</Label>
 				))}
-			</Section>
-		</section>
+			</Source>
+		</Section>
 	);
 };
 
-const Section = styled.section`
+const Source = styled.section`
 	display: flex;
 	gap: 7px;
 	flex-wrap: wrap;

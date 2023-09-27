@@ -16,6 +16,7 @@ export const Select = ({ onChange, defaultValue, options, ...rest }: ISelect) =>
 };
 
 const StyledSelect = styled.select`
+	width: 150px;
 	position: relative;
 	font-family: inherit;
 	padding: 7px 9px;
