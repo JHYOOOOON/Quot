@@ -14,4 +14,4 @@ export const sourceAtom = atom<Source>({
 
 export const bgColorsAtom = atom<BgColors>([]);
 
-export const fontAtom = atom<Font>("NotoSans");
+export const fontAtom = atom<Font>("monospace");
