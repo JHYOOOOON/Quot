@@ -7,7 +7,7 @@ import { Font, bgColorsAtom, fontAtom } from "@/store";
 
 export const CardStyles = () => {
 	const [bgColors, setBgColors] = useAtom(bgColorsAtom);
-	const [bgColor, setBgColor] = useState("#000000");
+	const [bgColor, setBgColor] = useState("#ffffff");
 	const [font, setFont] = useAtom(fontAtom);
 	const fonts: Font[] = ["monospace", "IBMPlexSans", "NanumMyeongjo", "NotoSans"];
 

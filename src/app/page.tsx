@@ -1,13 +1,13 @@
 "use client";
 
 import { styled } from "styled-components";
-import { Form, Card } from "./components";
+import { Form, CardDownload } from "./components";
 
 export default function Home() {
 	return (
 		<Main>
 			<Form />
-			<Card />
+			<CardDownload />
 		</Main>
 	);
 }

@@ -10,12 +10,12 @@ export const Card = () => {
 
 	return (
 		<Wrapper $bgcolors={cardInform.bgColors} $font={cardInform.font}>
-			<p>{cardInform.bookQuotes}</p>
-			<p>
+			<Quote>{cardInform.bookQuotes}</Quote>
+			<Source>
 				{cardInform.author}, 『{cardInform.name}』,
 				{cardInform.translator ? ` ${cardInform.translator}, ` : " "}
 				{cardInform.publisher}({cardInform.publicationYear}), p{cardInform.page}.
-			</p>
+			</Source>
 		</Wrapper>
 	);
 };
@@ -31,14 +31,12 @@ const hexToRgb = (hex: string) => {
 		: null;
 };
 
-const Wrapper = styled.div<{ $bgcolors: BgColors; $font: Font }>`
+const Wrapper = styled.section<{ $bgcolors: BgColors; $font: Font }>`
 	font-family: ${({ $font }) => $font}, "sans-serif";
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	width: 300px;
-	aspect-ratio: 1/1;
-	padding: 20px 40px;
+	padding: 35px 40px;
 	line-height: 1.5;
 	background: ${({ $bgcolors }) => {
 		if ($bgcolors) {
@@ -54,4 +52,13 @@ const Wrapper = styled.div<{ $bgcolors: BgColors; $font: Font }>`
 						.join(",");
 		} else return "#ffffff";
 	}};
+`;
+
+const Quote = styled.p`
+	margin: 0;
+	margin-bottom: 20px;
+`;
+
+const Source = styled.p`
+	margin: 0;
 `;
