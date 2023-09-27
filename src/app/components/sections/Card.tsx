@@ -5,11 +5,13 @@ import { styled } from "styled-components";
 
 import { BgColors, Font, cardInformAtom } from "@/store";
 
+export const CARD_ID = "card";
+
 export const Card = () => {
 	const cardInform = useAtomValue(cardInformAtom);
 
 	return (
-		<Wrapper $bgcolors={cardInform.bgColors} $font={cardInform.font}>
+		<Wrapper id={CARD_ID} $bgcolors={cardInform.bgColors} $font={cardInform.font}>
 			<Quote>{cardInform.bookQuotes}</Quote>
 			<Source>
 				{cardInform.author}, 『{cardInform.name}』,
@@ -57,9 +59,11 @@ const Wrapper = styled.section<{ $bgcolors: BgColors; $font: Font }>`
 const Quote = styled.p`
 	margin: 0;
 	margin-bottom: 20px;
+	/* font-size: var(--font-size-300); */
 	white-space: pre-wrap;
 `;
 
 const Source = styled.p`
+	font-size: var(--font-size-200);
 	margin: 0;
 `;
