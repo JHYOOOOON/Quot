@@ -75,7 +75,6 @@ export const CardContents = () => {
 
 const Source = styled.section`
 	display: flex;
-	gap: 7px;
+	gap: 10px;
 	flex-wrap: wrap;
-	margin-top: 10px;
 `;
