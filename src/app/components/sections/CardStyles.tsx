@@ -2,7 +2,7 @@ import { ChangeEvent, MouseEventHandler, useState } from "react";
 import { styled } from "styled-components";
 import { useAtom } from "jotai";
 
-import { Color, ColorButton, Input, Label } from "..";
+import { Color, ColorButton, Label, Select } from "..";
 import { Font, bgColorsAtom, fontAtom } from "@/store";
 
 export const CardStyles = () => {
@@ -31,11 +31,7 @@ export const CardStyles = () => {
 	return (
 		<section>
 			<Label label="글꼴" name="font">
-				<select onChange={handleFontChange} defaultValue={font}>
-					{fonts.map((font) => (
-						<option key={font}>{font}</option>
-					))}
-				</select>
+				<Select onChange={handleFontChange} defaultValue={font} options={fonts} />
 			</Label>
 			<Label label="배경색상(최대 4개)" name="backgroundColors" position="top">
 				<Color
