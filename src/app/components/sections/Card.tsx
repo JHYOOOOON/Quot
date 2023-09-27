@@ -57,6 +57,7 @@ const Wrapper = styled.section<{ $bgcolors: BgColors; $font: Font }>`
 const Quote = styled.p`
 	margin: 0;
 	margin-bottom: 20px;
+	white-space: pre-wrap;
 `;
 
 const Source = styled.p`
