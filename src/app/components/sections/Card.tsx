@@ -37,7 +37,7 @@ const Wrapper = styled.section<{ $bgcolors: BgColors; $font: Font }>`
 	font-family: ${({ $font }) => $font}, "sans-serif";
 	display: flex;
 	flex-direction: column;
-	width: 300px;
+	width: 320px;
 	padding: 35px 40px;
 	line-height: 1.5;
 	background: ${({ $bgcolors }) => {
@@ -64,6 +64,6 @@ const Quote = styled.p`
 `;
 
 const Source = styled.p`
-	font-size: var(--font-size-200);
+	font-size: var(--font-size-300);
 	margin: 0;
 `;

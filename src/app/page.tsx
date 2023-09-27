@@ -14,7 +14,7 @@ export default function Home() {
 
 const Main = styled.main`
 	width: fit-content;
-	margin: 0 auto;
+	margin: 30px auto;
 	display: flex;
 	gap: 10px;
 `;

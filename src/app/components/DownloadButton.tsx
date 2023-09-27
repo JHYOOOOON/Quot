@@ -1,4 +1,6 @@
+import { styled } from "styled-components";
 import html2canvas from "html2canvas";
+import { FiDownload } from "react-icons/fi";
 
 import { CARD_ID } from "./sections";
 import { useAtomValue } from "jotai";
@@ -24,5 +26,28 @@ export const DownloadButton = () => {
 		downloadImage(url);
 	};
 
-	return <button onClick={handleClick}>이미지 저장</button>;
+	return (
+		<Button onClick={handleClick}>
+			<FiDownload />
+			이미지 저장
+		</Button>
+	);
 };
+
+const Button = styled.button`
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	font-family: inherit;
+	padding: 5px 7px;
+	color: #029702;
+	border: 2px solid #029702;
+	border-radius: 5px;
+	background-color: white;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: #029702;
+		color: white;
+	}
+`;
