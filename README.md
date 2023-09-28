@@ -14,4 +14,6 @@
 
 <img width="300" src="https://github.com/JHYOOOOON/Quot/assets/50460114/f278f6c1-ab32-46ad-b69d-4cf94cc965f8" alt="밝은 밤 인용" />
 
+<br/>
+
 <img width="300" src="https://github.com/JHYOOOOON/Quot/assets/50460114/473ec7ca-2dcf-4e33-9635-bb6f7980680f" alt="천 개의 파랑 인용" />
