@@ -38,7 +38,8 @@ const DeleteButton = styled.button`
 	padding: 0;
 	margin: 0;
 	cursor: pointer;
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: #d0d0d0;
 	}
 `;

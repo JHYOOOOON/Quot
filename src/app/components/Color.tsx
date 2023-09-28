@@ -50,7 +50,8 @@ const PlusButton = styled.button`
 	border: none;
 	background-color: white;
 	cursor: pointer;
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: #000;
 		color: white;
 	}

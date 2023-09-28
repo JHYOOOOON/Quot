@@ -46,7 +46,8 @@ const Button = styled.button`
 	background-color: white;
 	cursor: pointer;
 	transition: background-color 0.2s;
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: #029702;
 		color: white;
 	}
