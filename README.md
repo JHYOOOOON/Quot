@@ -8,7 +8,7 @@
 
 ### 📷 스크린샷
 
-<img width="700" alt="Quot 스크린샷" src="https://i.ibb.co/vHfW2JH/2023-09-28-10-55-12.png" />
+<img width="500" alt="Quot 스크린샷" src="https://i.ibb.co/vHfW2JH/2023-09-28-10-55-12.png" />
 
 ### 📚 이미지 저장 예시
 
