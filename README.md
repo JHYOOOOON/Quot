@@ -8,12 +8,12 @@
 
 ### 📷 스크린샷
 
-<img width="700" alt="Quot 스크린샷" src="https://github.com/JHYOOOOON/Quot/assets/50460114/2d38a986-bfe1-4e3e-acda-90a59d33c99e" />
+<img width="700" alt="Quot 스크린샷" src="https://i.ibb.co/vHfW2JH/2023-09-28-10-55-12.png" />
 
 ### 📚 이미지 저장 예시
 
-<img width="300" src="https://github.com/JHYOOOOON/Quot/assets/50460114/f278f6c1-ab32-46ad-b69d-4cf94cc965f8" alt="밝은 밤 인용" />
+<img width="300" src="https://i.ibb.co/PwqJFj5/image.png" alt="밝은 밤 인용" />
 
 <br/>
 
-<img width="300" src="https://github.com/JHYOOOOON/Quot/assets/50460114/473ec7ca-2dcf-4e33-9635-bb6f7980680f" alt="천 개의 파랑 인용" />
+<img width="300" src="https://i.ibb.co/ZxXXvcJ/2.png" alt="천 개의 파랑 인용" />
