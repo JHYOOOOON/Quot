@@ -66,4 +66,5 @@ body {
 	color: rgb(var(--foreground-rgb));
 	background: var(--background-rgb);
 	font-size: 16px;
+	margin: 0;
 }
