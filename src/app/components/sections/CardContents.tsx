@@ -10,26 +10,29 @@ type SourceItem = {
 	type: HTMLInputTypeAttribute;
 	valueKey: keyof Source;
 	placeholder?: string;
+	required: boolean;
 };
 
 export const CardContents = () => {
 	const [bookQuotes, setBookQuotes] = useAtom(bookQuotesAtom);
 	const [source, setSource] = useAtom(sourceAtom);
 	const sourceItems: SourceItem[] = [
-		{ label: "저자", name: "author", type: "text", valueKey: "author" },
-		{ label: "제목", name: "name", type: "text", valueKey: "name" },
-		{ label: "출판사", name: "publisher", type: "text", valueKey: "publisher" },
+		{ label: "저자", name: "author", type: "text", valueKey: "author", required: true },
+		{ label: "제목", name: "name", type: "text", valueKey: "name", required: true },
+		{ label: "출판사", name: "publisher", type: "text", valueKey: "publisher", required: true },
 		{
 			label: "옮긴이",
 			name: "translator",
 			type: "text",
 			valueKey: "translator",
+			required: false,
 		},
 		{
 			label: "출판연도",
 			name: "publicationYear",
 			type: "number",
 			valueKey: "publicationYear",
+			required: true,
 		},
 		{
 			label: "페이지",
@@ -37,6 +40,7 @@ export const CardContents = () => {
 			type: "text",
 			valueKey: "page",
 			placeholder: "예: 12, 50-53",
+			required: true,
 		},
 	];
 
@@ -59,7 +63,7 @@ export const CardContents = () => {
 			</Label>
 			<Source>
 				{sourceItems.map((item) => (
-					<Label label={item.label} name={item.name} key={item.label}>
+					<Label label={item.label} name={item.name} key={item.label} required={item.required}>
 						<Input
 							name={item.name}
 							value={source[item.valueKey]}
