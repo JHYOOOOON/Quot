@@ -18,4 +18,7 @@ const Main = styled.main`
 	padding: 0 30px;
 	display: flex;
 	gap: 20px;
+	@media screen and (max-width: 940px) {
+		flex-direction: column;
+	}
 `;
